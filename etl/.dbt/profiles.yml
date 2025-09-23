@@ -1,0 +1,10 @@
+etl:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: "..\\my_ducklake.duckdb"
+      schema: analytics
+      threads: 4
+      extensions: []
+      keepalives_idle: 0

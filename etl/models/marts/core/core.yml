@@ -1,0 +1,24 @@
+version: 2
+
+models:
+  - name: fct_customer_orders
+    description: "Aggregated order metrics per customer excluding cancelled orders."
+    columns:
+      - name: customer_id
+        description: "Unique identifier of the customer."
+        tests:
+          - not_null
+      - name: order_count
+        description: "Number of non-cancelled orders placed by the customer."
+        tests:
+          - not_null
+      - name: total_revenue
+        description: "Sum of order amounts for non-cancelled orders."
+        tests:
+          - not_null
+      - name: completed_revenue
+        description: "Revenue attributed to completed orders."
+      - name: first_order_date
+        description: "Date of the first non-cancelled order."
+      - name: last_order_date
+        description: "Date of the most recent non-cancelled order."
