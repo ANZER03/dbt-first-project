@@ -1,0 +1,30 @@
+# Python cache and metadata
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+
+# Virtual environments and local tooling
+.venv/
+venv/
+ENV/
+env/
+.env/
+.env.*
+
+# dbt build artifacts
+etl/target/
+etl/logs/
+etl/dbt_packages/
+etl/.dbt/
+logs/
+
+# DuckDB and DuckLake state
+*.duckdb
+*.ducklake
+*.ducklake.files/
+
+# OS and editor noise
+.DS_Store
+Thumbs.db
